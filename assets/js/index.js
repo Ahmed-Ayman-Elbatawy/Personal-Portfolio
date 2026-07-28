@@ -376,3 +376,20 @@ for (let i = 0; i < themeColors.length; i++) {
 
     
         UserPreferences();
+
+
+        // MobileNav
+        var menubtn = document.querySelector(".mobile-menu-btn");
+        var mobileNav = document.querySelector(".nav-links");
+
+        menubtn.addEventListener("click", function(){
+            mobileNav.classList.toggle("active")
+            if( mobileNav.classList.contains("active")){
+                menubtn.setAttribute("aria-label","غلق القائمة")
+            }
+            else{
+                menubtn.setAttribute("aria-label","فتح القائمة")
+            }
+        })
+
+
